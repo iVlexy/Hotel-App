@@ -1,0 +1,11 @@
+name: hotel-app
+services:
+  basics:
+    build: .
+    ports:
+      - 8081:80
+    develop:
+      watch:
+        - action: sync
+          path: ./dist/hotel-app/browser
+          target: /usr/local/apache2/htdocs/
