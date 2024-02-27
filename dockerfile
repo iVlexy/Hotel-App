@@ -7,4 +7,4 @@ COPY hotel-app .
 RUN npm run build
 
 FROM httpd:2.4
-COPY ./dist/hotel-app/browser /usr/local/apache2/htdocs/
+COPY --from=build ./dist/hotel-app/browser /usr/local/apache2/htdocs/
