@@ -22,7 +22,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ${{ secrets.DOCKERUSER }}/hotel-app
+          images: ${{ secrets.DOCKER_USER }}/hotel-app
           tags: type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push Docker image
