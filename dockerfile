@@ -6,4 +6,4 @@ ADD ./angular.json ./tsconfig.json ./
 ADD ./src ./src
 
 FROM httpd:2.4
-COPY --from=build ./dist/hotel-app/browser /usr/local/apache2/htdocs/
+COPY --from=build ./frontend//dist/hotel-app/browser /usr/local/apache2/htdocs/
