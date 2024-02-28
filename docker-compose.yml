@@ -11,8 +11,7 @@ services:
           target: /usr/local/apache2/htdocs/
     networks:
       proxy:
-        external: true
-          - PRxy01
+
 networks:
-  nginxproxymanager:
-    name: PRxy01
+  proxy:
+    external: true
